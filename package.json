@@ -1,0 +1,32 @@
+{
+  "name": "restaurant-reserv",
+  "version": "1.0.0",
+  "description": "restaurant reservation using MongoDB, Express, and NodeJS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass public/sass/main.scss public/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\" ",
+    "start": "concurrently \"node app.js\" \"npm run watch-css\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonyangela/restaurant-reservation.git"
+  },
+  "author": "Leoni Angela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonyangela/restaurant-reservation/issues"
+  },
+  "homepage": "https://github.com/leonyangela/restaurant-reservation#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.2"
+  }
+}

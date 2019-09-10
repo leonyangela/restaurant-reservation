@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 10/16(16 is the default font-size root) */
+    // this defines what 1 rem is
+    // 1rem = 10px; 10px/16px = 62.5%
+    font-size: 62.5%;
+    // @include respond(tab-land){     //width < 1200
+    //     font-size: 56.25%; //1rem = 8px, 9/16 = 50%
+    // }
+
+    // @include respond(tab-port){     //width < 600
+    //     font-size: 50%; //1rem = 8px, 8/16 = 50%
+    // }
+
+    // @include respond(phone){
+    //     font-size: 30%;     //1rem 4.8px
+    // }
+
+    // @include respond(big-desktop){
+    //     font-size: 75%; //1rem = 12, 12/16
+    // }
+    
+}
+
+
+
+body {
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    background-color: $color-white;
+
+    // @include respond(tab-port){     //width < 600
+    //     padding: 0; 
+    // }
+}
+
+
