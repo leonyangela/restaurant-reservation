@@ -34,28 +34,8 @@
 // }
 
 .section-book{
-    // padding: 15rem 0;
+    padding: 0 4rem;
     background-color: $color-charcoal;
-    height: 20vh;
-    display: inline-flexbox;
-    flex-wrap: wrap;
-    // background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-    .book {
-        color: $color-baby-blue;
-        padding: 1rem 0;
-        background-color: blueviolet;
-
-        &__text {    
-            background-color: rgb(161, 212, 161);
-            text-align: center;
-            font-size: 2.5rem;
-            width: 20%;
-        }
-    
-        &__form {
-            display: inline-flex;
-            width: 80%;
-        }
-    }
+   
 }
 

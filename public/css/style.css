@@ -78,6 +78,13 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
+.feature-box {
+  text-align: start;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+  color: #E5D7BE; }
+
 .header {
   height: 75vh;
   background-image: linear-gradient(to right bottom, rgba(227, 232, 240, 0.8), rgba(229, 215, 190, 0.8)), url(../images/header.jpg);
@@ -89,38 +96,47 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: yellow; }
+    text-align: center; }
 
 .row {
-  width: 90%;
-  margin: 0 4rem;
-  max-height: 30vh;
-  background-color: pink; }
+  min-height: 13vh;
+  display: flex;
+  justify-content: center; }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 2rem; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) /2);
+    width: calc((100% - 2rem) /2);
     background-color: white; }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3);
+    width: calc((100% - 2 * 2rem) / 3);
     background-color: yellow; }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+    width: calc(2 * ((100% - 2 * 2rem) / 3) + 2rem);
     background-color: red; }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4);
+    width: calc((100% - 3 * 2rem) / 4);
     background-color: yellow; }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+    width: calc(2 * ((100% - 3 * 2rem) / 4) + 2rem);
     background-color: green; }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+    width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem);
     background-color: blue; }
+  .row .col-1-of-5 {
+    width: calc((100% - 2rem) / 6); }
+  .row .col-2-of-5 {
+    width: calc(2 * ((100% - 3 * 2rem) / 5) + 2rem);
+    background-color: pink; }
+  .row .col-3-of-5 {
+    width: calc(3 * ((100% - 3 * 2rem) / 5) + 2 * 2rem);
+    background-color: lightblue; }
+  .row .col-4-of-5 {
+    width: calc(4 * ((100% - 4 * 2rem) / 5) + 3 * 2rem);
+    background-color: lightsalmon; }
 
 .navbar {
   height: 10vh;
@@ -165,19 +181,5 @@ body {
           padding-left: 7%; }
 
 .section-book {
-  background-color: #414754;
-  height: 20vh;
-  display: inline-flexbox;
-  flex-wrap: wrap; }
-  .section-book .book {
-    color: #E3E8F0;
-    padding: 1rem 0;
-    background-color: blueviolet; }
-    .section-book .book__text {
-      background-color: #a1d4a1;
-      text-align: center;
-      font-size: 2.5rem;
-      width: 20%; }
-    .section-book .book__form {
-      display: inline-flex;
-      width: 80%; }
+  padding: 0 4rem;
+  background-color: #414754; }
