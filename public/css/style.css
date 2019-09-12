@@ -48,7 +48,6 @@ body {
   color: #414754;
   text-transform: uppercase;
   text-align: center;
-  padding: 5rem;
   /* removes shadow */
   backface-visibility: hidden;
   margin-bottom: 3rem; }
@@ -107,8 +106,38 @@ body {
   color: #E5D7BE; }
 
 .card {
-  height: 52vh;
-  background-color: lightgreen; }
+  height: 72vh;
+  background-color: lightgreen;
+  position: relative; }
+  .card__picture {
+    background-size: cover;
+    height: 23rem; }
+    .card__picture--1 {
+      background-image: url(../../images/restaurant-1.jpg); }
+    .card__picture--2 {
+      background-image: url(../../images/restaurant-2.jpg); }
+    .card__picture--3 {
+      background-image: url(../../images/restaurant-3.jpg); }
+  .card__heading {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: .5rem; }
+  .card__heading-span {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase; }
+  .card__details {
+    padding: .2rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #414754; }
 
 .header {
   height: 75vh;
@@ -120,7 +149,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center; }
 
 .row {
@@ -210,4 +238,4 @@ body {
 
 .section-popular {
   background-color: #E3E8F0;
-  padding: 0 5rem; }
+  padding: 5rem 5rem; }
