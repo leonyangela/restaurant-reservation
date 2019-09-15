@@ -1,67 +1,82 @@
-.navbar {
-    height: 10vh;
-    width: 100%;
+.navbar{
+    height: 8vh;
+    font-size: 1.5rem;
+    color: $color-coffee-dark;
     display: flex;
-    justify-content: space-between;
-    // background-color: #fff;
-    font-size: 2rem;
-    color: $color-gray;
-
-    &___logo {
-        height: 2rem;
-    }
-
+    flex-direction: row;
+    
     &__left {
-        background-color: $color-sand;
-        width: 20%;
+        width: 50%;
+        background-color: $color-white;
         text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-    }
+        &__logo-box {
+            padding: 0 4rem;
+            position: absolute;
+            background-size: cover;
+        }
+    
+        &__logo {
+            height: 5rem;
+        }
 
-    &__center {
-        background-color: $color-sand;
-        width: 60%;
-        text-align: center;
-        padding-top: 2rem;
+        &__menu {
+            padding: .8rem 13rem;
+            font-size: 1.7rem;
 
-        ul {
-            list-style-type: none;
-            
-            li {
-                display: inline-flex;
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                list-style-type: none;
 
-                a {
-                    text-decoration: none;
-                    color: $color-gray;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $color-coffee-dark;        
+                    }
+
+                    &:not(:last-child){
+                        padding-right: 2.5rem;
+                    }
                 }
-                
-                &:not(:first-child){
-                    padding-left: 10%;
-                }
-
-            }
+            }    
         }
     }
 
-    &__right {
-        background-color: $color-sand;
+   
+    &__center {
+        background-color: $color-white;
         width: 20%;
-        text-align: center;
-        padding-top: 2rem;
+    }
+
+    &__right {
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: $color-white;
+        padding-left: 24rem;
+        padding-top: .8rem;
+        font-size: 1.7rem;
 
         ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             list-style-type: none;
-            
-            li {
-                display: inline-flex;
 
+            li {
                 a {
                     text-decoration: none;
-                    color: $color-gray;
+                    color: $color-coffee-dark;        
                 }
-                
-                &:not(:first-child){
-                    padding-left: 7%;
+
+                &:not(:last-child){
+                    padding-right: 2.5rem;
                 }
             }
         }

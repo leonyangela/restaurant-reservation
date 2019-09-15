@@ -1,0 +1,57 @@
+.beans-box {
+    padding: 2rem;
+    // border: 2px solid #000000;
+    width: 24rem;
+    background-color: $color-beans-box;
+    border: 1px solid $color-coffee-dark;
+
+    &__image--1 {
+        border-radius: 20rem 20rem 20rem 20rem;
+        -moz-border-radius: 20rem 20rem 20rem 20rem;
+        -webkit-border-radius: 20rem 20rem 20rem 20rem;
+        background-image: url(/images/roasted-coffee-beans.jpg);
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__image--2 {
+        border-radius: 20rem 20rem 20rem 20rem;
+        -moz-border-radius: 20rem 20rem 20rem 20rem;
+        -webkit-border-radius: 20rem 20rem 20rem 20rem;
+        background-image: url(/images/light-coffee-beans.jpg);
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__image--3 {
+        border-radius: 20rem 20rem 20rem 20rem;
+        -moz-border-radius: 20rem 20rem 20rem 20rem;
+        -webkit-border-radius: 20rem 20rem 20rem 20rem;
+        background-image: url(/images/espresso-coffee-beans.jpg);
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__image--4 {
+        border-radius: 20rem 20rem 20rem 20rem;
+        -moz-border-radius: 20rem 20rem 20rem 20rem;
+        -webkit-border-radius: 20rem 20rem 20rem 20rem;
+        background-image: url(/images/dark-coffee-beans.jpg);
+        width: 20rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__details {
+        padding: 2rem;
+    }
+   
+
+}

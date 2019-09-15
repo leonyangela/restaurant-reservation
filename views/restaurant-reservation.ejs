@@ -7,35 +7,42 @@
     <title>Restaurant Reservation</title>
 
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
 </head>
 
 <body>
-    <nav class="navbar">
+    <div class="navbar">
         <div class="navbar__left">
-            <div class="navbar__logo">Rest<br>Reserv.</div>
+            <div class="navbar__left__logo-box">
+                <img src="/images/logo.png" alt="logo" class="navbar__left__logo">
             </div>
-        </div>
-    
-        <div class="navbar__center">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Reservation</a></li>
-                <li><a href="#">Location</a></li>
-            </ul>
-        </div>
-
-        <div class="navbar__right">
+            
+            <div class="navbar__left__menu">
                 <ul>
-                    <li><a href="#">Log In</a></li>
-                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Location</a></li>
                 </ul>
             </div>
-    </nav>
+        </div>
+        
+        <div class="navbar__center">&nbsp;</div>
+
+        <div class="navbar__right">
+            <ul>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
 
     <header class="header">
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">eat. be happy. repeat.</span>
+                <span class="heading-primary--main">Made with love</span>
+                <span class="heading-primary--sub">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, sapiente. Officia, vero rerum.</span>
             </h1>
 
             <a href="" class="btn btn--gray btn--animated">book now</a>
@@ -43,168 +50,133 @@
     </header>
 
     <main>
-        <section class="section-book">
+        <section class="section-beans">
             <div class="row">
-                <div class="col-1-of-5">
-                    <div class="feature-box">
-                        <form action="#" class="form">
-                            <div class="form__group">
-                                <label for="location" class="form__label">Location</label><br>
-                                <input type="text" class="" placeholder="Location" required>
-                            </div>
-                        </form>
+                <h1 class="heading-secondary">Our Beans</h1>
+
+                <div class="col-1-of-4">
+                    <div class="beans-box">
+                        <div class="beans-box__image--1">
+                            &nbsp;
+                        </div>
+
+                        <div class="beans-box__details">
+                            <h2 class="heading-tertiary">
+                                <span class="heading-tertiary--main">Roasted Coffee</span>
+                                <span class="heading-tertiary--sub">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                            </h2>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-1-of-5">
-                    <div class="feature-box">
-                        <form action="#" class="form">
-                            <div class="form__group">
-                                <label for="date" class="form__label">Date</label><br>
-                                <input type="date" class="" placeholder="date" required>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="col-1-of-5">
-                    <div class="feature-box">
-                        <form action="#" class="form">
-                            <div class="form__group">
-                                <label for="time" class="form__label">Time</label><br>
-                                <input type="time" class="" placeholder="00:00" required>
-                            </div>
-                        </form>
+                <div class="col-1-of-4">
+                    <div class="beans-box">
+                        <div class="beans-box__image--2">
+                            &nbsp;
+                        </div>
+
+                        <div class="beans-box__details">
+                            <h2 class="heading-tertiary">
+                                <span class="heading-tertiary--main">Light Coffee</span>
+                                <span class="heading-tertiary--sub">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                            </h2>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-1-of-5">
-                    <div class="feature-box">
-                        <form action="#" class="form">
-                            <div class="form__group">
-                                <label for="number-of-people" class="form__label">Number of people</label><br>
-                                <input type="number" class="" placeholder="1" required>
-                            </div>
-                        </form>
+                <div class="col-1-of-4">
+                    <div class="beans-box">
+                        <div class="beans-box__image--3">
+                            &nbsp;
+                        </div>
+
+                        <div class="beans-box__details">
+                            <h2 class="heading-tertiary">
+                                <span class="heading-tertiary--main">Espresso Coffee</span>
+                                <span class="heading-tertiary--sub">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                            </h2>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-1-of-6">
-                    <div class="feature-box">
-                        <form action="#" class="form">
-                            <div class="form__group">
-                                <button class="btn btn-xs">Reserve</button>
-                            </div>
-                        </form>
+                <div class="col-1-of-4">
+                    <div class="beans-box">
+                        <div class="beans-box__image--4">
+                            &nbsp;
+                        </div>
+
+                        <div class="beans-box__details">
+                            <h2 class="heading-tertiary">
+                                <span class="heading-tertiary--main">Dark Coffee</span>
+                                <span class="heading-tertiary--sub">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                            </h2>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section class="section-popular">
-            <h1 class="heading-secondary">
-                <span class="heading-secondary--main">Popular Restaurant in 2019</span>
-                <span class="heading-secondary--sub">Take a look at this offer</span>
-            </h1>
+        <section class="section-testimony">
+            <h1 class="heading-quaternary">Our Testimonial</h1>
             
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="card">
-                        <div class="card__picture card__picture--1">
-                            &nbsp;
-                        </div>
-
-                        <h1 class="card__heading">
-                            <span class="card__heading-span">Leon</span>
-                        </h1>
-
-                        <div class="card__details">
-                            <ul>
-                                <li>Mon - Sun. 8AM - 11PM</li>
-                                <li>Bar & Kitchen</li>
-                                <li>Reservations Recommended</li>
-                                <li>Price: $$$$</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-1-of-3">
-                    <div class="card">
-                        <div class="card__picture card__picture--2">
-                            &nbsp;
-                        </div>
-
-                        <h1 class="card__heading">
-                            <span class="card__heading-span">Vinbar</span>
-                        </h1>
-
-                        <div class="card__details">
-                            <ul>
-                                <li>Mon - Sun. 10AM - 10PM</li>
-                                <li>Fine Dining</li>
-                                <li>Italian - Western Food</li>
-                                <li>Price: $$$ - $$$$</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-1-of-3">
-                    <div class="card">
-                        <div class="card__picture card__picture--3">
-                            &nbsp;
-                        </div>
-
-                        <h1 class="card__heading">
-                            <span class="card__heading-span">Yo Pizza!</span>
-                        </h1>
-
-                        <div class="card__details">
-                            <ul>
-                                <li>Mon - Sun. 24 Hours</li>
-                                <li>Italian Food</li>
-                                <li>Fast Food</li>
-                                <li>Price: $$</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="feature-box">
+                <h1 class="testimony">
+                    <span class="testimony__person-name">Teresa Shultz</span>
+                    <span class="testimony__text">“I just woke up and made myself a White Chocolate Peppermint Latte with your Espresso Beans. It is so amazing. It helps me feel better and wake up whenever I am down. ”</span>
+                </h1>
             </div>
+
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer__logo-box">
-            <!-- <h1 class="footer__logo">Rest<br>Reserv.</h1> -->
-            <!-- <picture class="footer__logo"> -->
-                <!-- <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x," media="(max-width: 37.5em)">
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" class="footer__logo" src="img/logo-green-2x.png">
-                </picture> -->
-        </div>
-
         <div class="row">
-            <div class="col-1-of-2">
+            <img src="/images/logo.png" alt="" class="footer__logo-box">
+                
+            <div class="footer__navigation">
+                <ul class="footer__list">
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Reservation</a>
+                    <a href="#" class="footer__link">Location</a>
+                    <a href="#" class="footer__link">Log In</a>
+                    <a href="#" class="footer__link">Sign Up</a>
+                </ul>
+            </div>
+            <!-- <div class="col-1-of-3">
+                <h1 class="heading-footer">
+                    <span class="heading-footer--main">Treat Yourself</span>
+                    <span class="heading-footer--sub">Sip and Drink</span>
+                    <span class="heading-footer--text">We always make coffee with love.</span>                    
+                </h1>
+            </div>
+
+            <div class="col-1-of-3">
+                <h1 class="footer-store">
+                    <span class="footer-store--main">Opening Store:</span>
+                    <span class="footer-store--sub">Mon - Fri. 10AM - 10PM</span>
+                    <span class="footer-store--sub">Sat - Sun. 10AM - 2AM</span>
+                </h1>
+                
+                
+            </div>
+
+            <div class="col-1-of-3">
                 <div class="footer__navigation">
                     <ul class="footer__list">
-                        <li class="footer__item">
-                            <a href="#" class="footer__link">Home</a>
-                            <a href="#" class="footer__link">Reservation</a>
-                            <a href="#" class="footer__link">Location</a>
-                            <a href="#" class="footer__link">Log In</a>
-                            <a href="#" class="footer__link">Sign Up</a>
-                        </li>
+                        <li><a href="#" class="footer__link">Home</a></li>
+                        <li><a href="#" class="footer__link">Reservation</a></li>
+                        <li><a href="#" class="footer__link">Location</a></li>
+                        <li><a href="#" class="footer__link">Log In</a></li>
+                        <li><a href="#" class="footer__link">Sign Up</a></li>
                     </ul>
                 </div>
-            </div>
-
-            <div class="col-1-of-2">
-                <p class="footer__copyright">
-                    Built by <a href="#" class="footer__link">Leonyyangela.</a>Copyright &copy; by Leoni Angela. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Leoni Angela, is of course highly appreciated.
-                </p>
-            </div>
+            </div> -->
         </div>
     </footer>
-
+<!-- <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">Leonyyangela.</a>Copyright &copy; by Leoni Angela. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Leoni Angela, is of course highly appreciated.
+                </p> -->
+                
 </body>
 </html>
