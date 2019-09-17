@@ -6,7 +6,7 @@ var productSchema = new mongoose.Schema({
     price: String,
     image: String,
     description: String,
-    createdAt: {type: date, default: Date.now }
+    createdAt: {type: Date, default: Date.now }
 });
 
 
