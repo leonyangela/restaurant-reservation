@@ -8,7 +8,7 @@
         text-decoration: none;
         padding: 1.5rem 4rem;
         display: inline-block;
-        border-radius: 10rem;
+        border-radius: 5rem;
         transition: all .2s;
         position: relative;
         font-size: $default-font-size;
@@ -70,6 +70,59 @@
 //     /* when we hover the button, then we want some certain styles
 //     for the after pseudo-element, z-index != -1 */
    
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-square {
+    &,
+    /* pseudo classes */
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .5rem;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.3rem;
+        margin: 0 7rem;
+
+        // change for the <button> element
+        border: none;
+        cursor: pointer;
+
+    }
+
+
+    &:hover{
+        transform: translateY(-.3rem);
+        background-color: $color-coffee-sand;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active, &:focus{
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    &--gray{
+        background-color: $color-gray;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-gray;
+        }
+    }
+
     &--animated{
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;

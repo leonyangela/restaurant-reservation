@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restaurant Reservation</title>
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/fontawesome/css/all.css">
-</head>
-
-<body>
-    <div class="navbar">
-        <div class="navbar__left">
-            <div class="navbar__left__logo-box">
-                <img src="/images/logo.png" alt="logo" class="navbar__left__logo">
-            </div>
-            
-            <div class="navbar__left__menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Location</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="navbar__center">&nbsp;</div>
-
-        <div class="navbar__right">
-            <ul>
-                <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
-            </ul>
-        </div>
-    </div>
+<% include partials/header %>
 
     <header class="header">
         <div class="header__text-box">
@@ -130,53 +92,4 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="row">
-            <img src="/images/logo.png" alt="" class="footer__logo-box">
-                
-            <div class="footer__navigation">
-                <ul class="footer__list">
-                    <a href="#" class="footer__link">Home</a>
-                    <a href="#" class="footer__link">Reservation</a>
-                    <a href="#" class="footer__link">Location</a>
-                    <a href="#" class="footer__link">Log In</a>
-                    <a href="#" class="footer__link">Sign Up</a>
-                </ul>
-            </div>
-            <!-- <div class="col-1-of-3">
-                <h1 class="heading-footer">
-                    <span class="heading-footer--main">Treat Yourself</span>
-                    <span class="heading-footer--sub">Sip and Drink</span>
-                    <span class="heading-footer--text">We always make coffee with love.</span>                    
-                </h1>
-            </div>
-
-            <div class="col-1-of-3">
-                <h1 class="footer-store">
-                    <span class="footer-store--main">Opening Store:</span>
-                    <span class="footer-store--sub">Mon - Fri. 10AM - 10PM</span>
-                    <span class="footer-store--sub">Sat - Sun. 10AM - 2AM</span>
-                </h1>
-                
-                
-            </div>
-
-            <div class="col-1-of-3">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li><a href="#" class="footer__link">Home</a></li>
-                        <li><a href="#" class="footer__link">Reservation</a></li>
-                        <li><a href="#" class="footer__link">Location</a></li>
-                        <li><a href="#" class="footer__link">Log In</a></li>
-                        <li><a href="#" class="footer__link">Sign Up</a></li>
-                    </ul>
-                </div>
-            </div> -->
-        </div>
-    </footer>
-<!-- <p class="footer__copyright">
-                    Built by <a href="#" class="footer__link">Leonyyangela.</a>Copyright &copy; by Leoni Angela. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Leoni Angela, is of course highly appreciated.
-                </p> -->
-                
-</body>
-</html>
+<% include partials/footer %>

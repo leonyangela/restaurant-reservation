@@ -1,0 +1,29 @@
+.product-box {
+    // width: 30rem;
+    background-color: $color-white;
+    width: 25rem;
+    height: 35rem;
+
+    -webkit-box-shadow: 11px 16px 27px -6px rgba(0,0,0,0.85);
+    -moz-box-shadow: 11px 16px 27px -6px rgba(0,0,0,0.85);
+    box-shadow: 11px 16px 27px -6px rgba(0,0,0,0.85);
+
+    &__image-product {
+        // background-image: url(/images/roasted-coffee-beans.jpg);
+        width: 25rem;
+        height: 20rem;
+        background-size: cover;
+        background-position: top;
+
+    }
+
+    &__button-box {
+        padding-top: .8em;
+        display: block;
+        text-align: center;
+    }
+    
+
+
+}
+

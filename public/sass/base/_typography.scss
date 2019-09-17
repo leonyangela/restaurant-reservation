@@ -22,7 +22,7 @@ body {
         text-align: center;
 
         animation-name: moveInLeft;
-        animation-duration: 7s;
+        animation-duration: .7s;
         animation-timing-function: ease-out;
     
         // @include respond(phone){
@@ -40,7 +40,7 @@ body {
         font-size: 1.7rem;
         font-weight: 400;
         letter-spacing: 1rem;
-        // animation: moveInRight 1s ease-out;
+        animation: moveInRight 1s ease-out;
 
         // @include respond(phone){
         //     letter-spacing: .5rem;
@@ -76,9 +76,9 @@ body {
         letter-spacing: .5rem;
         padding-bottom: 1.5rem;
 
-        // animation-name: moveInLeft;
-        // animation-duration: 1s;
-        // animation-timing-function: ease-out;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
     
     }
 
@@ -177,5 +177,42 @@ body {
     }
 }
 
+
+.heading-product {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 5rem 5rem 5rem;
+
+    &__details {
+        // padding-top: 2.3rem;
+
+        &--name {
+            display: block;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: 2rem;
+            text-decoration: none;
+            color: $color-coffee-dark;
+
+            &:hover {
+                color: $color-coffee-light;
+                cursor: pointer;
+            }
+        }
+    
+        &--price {
+            display: block;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: center;
+            color: $color-coffee-sand;
+        }
+    }
+
+    
+}
 
 
