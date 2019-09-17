@@ -20,7 +20,8 @@ var productRoutes = require("./routes/product"),
 
 mongoose.connect(process.env.MONGODB_URL, {
 	useNewUrlParser: true,
-	useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true
 }).then(() => {
 	console.log("Connected to DB Mongo Atlas!");
 }).catch(err => {
@@ -45,6 +46,12 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+//currentUser
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user;
+    next();
+});
 
 //routes
 app.use("/", indexRoutes);

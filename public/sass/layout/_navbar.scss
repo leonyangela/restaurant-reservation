@@ -58,11 +58,12 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: flex-end;
         background-color: $color-white;
-        padding-left: 24rem;
         padding-top: .8rem;
+        padding-right: 1.5rem;
         font-size: 1.7rem;
-
+        
         ul {
             display: flex;
             flex-direction: row;
@@ -72,12 +73,17 @@
             li {
                 a {
                     text-decoration: none;
-                    color: $color-coffee-dark;        
+                    color: $color-coffee-dark;  
+
+                    &:not(:last-child){
+                        padding-right: 2rem;
+                    }      
                 }
 
                 &:not(:last-child){
-                    padding-right: 2.5rem;
-                }
+                    padding-right: 2rem;
+                } 
+                
             }
         }
     }

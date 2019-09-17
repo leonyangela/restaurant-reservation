@@ -32,8 +32,15 @@
 
         <div class="navbar__right">
             <ul>
-                <li><a href="/login">Log In</a></li>
-                <li><a href="/register">Sign Up</a></li>
+                <% if (!currentUser) { %>
+                    <li><a href="/login">Log In</a></li>
+                    <li><a href="/register">Sign Up</a></li>
+                <% } else { %>
+                    <li>
+                        <a href="#">Welcome, <%= currentUser.username %></a>
+                        <a href="/logout">Logout</a>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </div>

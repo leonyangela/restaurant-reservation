@@ -445,9 +445,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-end;
     background-color: #fff;
-    padding-left: 24rem;
     padding-top: .8rem;
+    padding-right: 1.5rem;
     font-size: 1.7rem; }
     .navbar__right ul {
       display: flex;
@@ -457,8 +458,10 @@ body {
       .navbar__right ul li a {
         text-decoration: none;
         color: #3F1F00; }
+        .navbar__right ul li a:not(:last-child) {
+          padding-right: 2rem; }
       .navbar__right ul li:not(:last-child) {
-        padding-right: 2.5rem; }
+        padding-right: 2rem; }
 
 .footer {
   background-color: #C98765;
