@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+    <div class="section-form">
+        <h1>Edit detail product <%= product.name %></h1>
+
+        <form action="/shops/product-details/<%= product._id %>?_method=PUT" method="POST">
+                <label for="name" name="name">Name: </label>
+                <input type="text" name="product[name]" value="<%= product.name %>" required>
+        
+                <label for="price" name="price">Price: </label>
+                <input type="number" name="product[price]" value="<%= product.price %>" required>
+        
+                <label for="image" name="image">Image: </label>
+                <input class="form-control" type="text" name="product[image]" value="<%= product.image %>">
+        
+                <label for="description" name="description">Description: </label>   
+                <input type="textarea" name="product[description]" value="<%= product.description %>" required>
+        
+                <button>Submit</button>
+        </form>
+    </div>
+
+
+<% include ../partials/footer %>

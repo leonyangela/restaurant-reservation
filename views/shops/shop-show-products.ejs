@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+    
+    <section class="section-products">
+        <h1 class="heading-product">Items in our Shop</h1>
+
+        <div class="row">
+            <% products.forEach(function(product) { %> 
+                <div class="col-1-of-4">
+                    <div class="product-box">
+                        <div class="product-box__image-product">
+                            <img src="<%= product.image %>" alt="" class="product-box__image-product">
+                        </div>
+                        
+                        <h1 class="heading-product__details">
+                            <a class="heading-product__details--name" href="/shops/product-details/<%= product._id %>"><%= product.name %></a>
+                            <p class="heading-product__details--price">$<%= product.price %></p>
+                        </h1>
+
+                        <div class="product-box__button-box">
+                            <a href="" class="btn-square btn-square--gray btn-square--animated">add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+    </section>
+
+<% include ../partials/footer %>

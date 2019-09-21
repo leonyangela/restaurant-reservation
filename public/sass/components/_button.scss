@@ -1,7 +1,6 @@
 .btn {
     // will treated as button
     &,
-    /* pseudo classes */
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -13,7 +12,6 @@
         position: relative;
         font-size: $default-font-size;
 
-        // change for the <button> element
         border: none;
         cursor: pointer;
 
@@ -45,31 +43,6 @@
         }
     }
 
-//     &--green{
-//         background-color: $color-primary;
-//         color: $color-white;
-
-//         &::after {
-//             background-color: $color-primary;
-//         }
-//     }
-
-//     &::after{
-//         content: "";
-//         display: inline-block;
-//         height: 100%;
-//         width: 100%;
-//         border-radius: 10rem;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         z-index: -1;
-//         transition: all .4s;
-//     }
-
-//     /* when we hover the button, then we want some certain styles
-//     for the after pseudo-element, z-index != -1 */
-   
     &--animated{
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
@@ -78,7 +51,6 @@
 
 .btn-square {
     &,
-    /* pseudo classes */
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -90,12 +62,10 @@
         font-size: 1.3rem;
         margin: 0 7rem;
 
-        // change for the <button> element
         border: none;
         cursor: pointer;
 
     }
-
 
     &:hover{
         transform: translateY(-.3rem);
@@ -129,29 +99,38 @@
     }
 }
 
-// .btn-text{
-//     &:link,
-//     &:visited{
-//         font-size: $default-font-size;
-//         color: $color-primary;
-//         display: inline-block;
-//         text-decoration: none;
-//         border-bottom: .1rem solid $color-primary;
-//         padding: .3rem;
-//         transition: all .2s;
+.button-primary {
+    &,
+    &:link,
+    &:visited {
+        padding: 1rem;
+        background-color: $color-coffee-medium;
+        font-size: 1.3rem;
+        color: $color-white;
+        border: 0; 
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all .2s;
+       
+        border: none;
+        cursor: pointer;
+    }
 
-//     }
+    &:hover {
+        transform: translateY(-.3rem);
+        background-color: $color-coffee-sand;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        background-color: $color-coffee-light;
+        
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
 
-//     &:hover{
-//         background-color: $color-primary;
-//         color: $color-white;
-//         box-shadow: 0 1rem 2rem rgba($color-black, .15);
-//         transform: translateY(-2px);
-//     }
-
-//     &:active{
-//         box-shadow: 0 .5rem 1rem rgba($color-black, .15);
-//         transform: translateY(0);
-//     }
-// }
-
+    &:active, &:focus{
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+}

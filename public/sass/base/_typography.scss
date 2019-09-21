@@ -211,8 +211,27 @@ body {
             color: $color-coffee-sand;
         }
     }
-
-    
 }
 
+.product-desc {
+    font-size: 2rem;
+    font-weight: 400;
 
+    &__desc {
+        font-size: 2rem;
+        text-align: justify;
+        font-weight: 400;
+    }
+
+    &__price {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+    }
+}
+
+.heading-form {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}

@@ -1,0 +1,40 @@
+.detail-product {
+    position: relative;
+    width: 100%;
+    
+    &__heading {
+        text-align: center;
+        padding: 2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    &__image {
+        height: 39rem;
+    }
+
+    &__desc {
+        width: 50%;
+        height: 36rem;
+        padding: 5rem;
+        background-color: white;
+        position: absolute;
+        left: 58rem;
+        top: 26rem;
+    }
+
+    &__button-box {
+        display: flex;
+        justify-content: flex-start;
+        
+        &--left {
+            padding-right: 2rem;
+        }
+
+        &--center {
+            padding-right: 2rem;
+        }
+
+    }
+  
+}

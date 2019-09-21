@@ -1,5 +1,6 @@
 .row {
-   margin: 0 3rem;
+    max-width: $grid-width;
+    margin: 0 auto;
     
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
@@ -11,7 +12,8 @@
         float: left;
         
         &:not(:last-child){
-            margin-right: $gutter-horizontal;
+            margin-right: $gutter-horizontal-small;
+            padding-bottom: $gutter-vertical-small;
         }
     }
 
