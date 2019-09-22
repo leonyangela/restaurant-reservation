@@ -1,6 +1,7 @@
 var express = require("express"),
     router = express.Router(),
-    Product = require("../models/product");
+    Product = require("../models/product"),
+    middleware = require("../middleware");
 
 //product-list
 router.get("/", function(req, res) {
@@ -24,12 +25,12 @@ router.get("/", function(req, res) {
 });
 
 //view add new product
-router.get("/add-product", function(req, res) {
+router.get("/add-product", middleware.isLoggedIn, function(req, res) {
     res.render("shops/shop-add-product");
 });
 
 //add new product to database
-router.post("/add-product", function(req, res) {
+router.post("/add-product", middleware.isLoggedIn, function(req, res) {
     var name = req.body.name;
     var price = req.body.price;
     var image = req.body.image;
@@ -41,7 +42,7 @@ router.post("/add-product", function(req, res) {
         if(err) {
             console.log(err);
         } else {
-            console.log(newlyCreated);
+            req.flash("success", "Added new Product!");
             res.redirect("/shops");
         }
     });
@@ -59,43 +60,41 @@ router.get("/product-details/:id", function(req, res) {
 });
 
 //show update form detail product
-router.get("/product-details/:id/edit", function(req, res) {
+router.get("/product-details/:id/edit", middleware.isLoggedIn, function(req, res) {
     Product.findById(req.params.id, function(err, foundProduct){
         if( err ) {
             console.log(err);
-        } else { 
+        } else {
             res.render("shops/shop-edit-product", {product: foundProduct});
         }
     });
 });
 
 //update detail product
-router.put("/product-details/:id", function(req, res) {
+router.put("/product-details/:id", middleware.isLoggedIn, function(req, res) {
 	Product.findByIdAndUpdate(req.params.id, req.body.product, function(err, updatedCampground){
 		if(err){
             console.log(err);
 			res.redirect("/shops");
 		} else {
-            console.log("update campground");
+            req.flash("success", "Product updated successfully!");
 			res.redirect("/shops/product-details/" + req.params.id);
 		}
 	});
 });
 
 //delete product
-router.delete("/product-details/:id", function(req, res) {
+router.delete("/product-details/:id", middleware.isLoggedIn, function(req, res) {
     Product.findByIdAndDelete(req.params.id, function (err, product) {
         if(err) {
             res.redirect("/shops");
         } else {
             product.remove();
-            console.log("Product deleted!");
+            req.flash("success", "Product deleted successfully!");
             res.redirect("/shops");
         }
     });
 });
-
-
 
 
 module.exports = router;

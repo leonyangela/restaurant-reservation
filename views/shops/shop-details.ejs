@@ -27,29 +27,8 @@
                         <button class="button-primary btn--animated">Delete Product</button>
                     </form>
                 </div>
-                
             </div>
-        </div>
-     
+        </div>     
     </div>
-   
-
-
-    
-    
-
-   <img class="img-responsive" src="<%= product.image %>">
-   <h1><%= product.name %></h1>
-   <h1><%= product.price %></h1>
-   <h1><%= product.description %></h1>
-
-    <form action="/shops/product-details/<%= product._id %>/edit" method="GET">
-        <button>Edit Product</button>
-    </form>
-    
-    <form action="/shops/product-details/<%= product._id %>?_method=DELETE" method="POST">
-        <button>Delete Product</button>
-    </form>
-    
 
 <% include ../partials/footer %>

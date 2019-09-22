@@ -4,7 +4,7 @@ var express = require("express"),
     User = require("../models/user");
 
 router.get("/", function(req, res) {
-    res.render("restaurant-reservation");
+    res.render("home");
 });
 
 //register
@@ -19,9 +19,10 @@ router.post("/register", function(req, res) {
     User.register(newUser, req.body.password, function(err, user) {
         if (err) {
             console.log(err);
-            return res.render("register");
+            return res.render("register", {error: err.message});
         } else {
             passport.authenticate("local")(req, res, function(){
+                req.flash("success", "Successfully Signed Up! Nice to meet you " + req.body.username);
                 res.redirect("/"); 
             });
         }
@@ -35,14 +36,17 @@ router.get("/login", function(req, res) {
 
 //handling login logic
 router.post("/login", passport.authenticate("local", {
-		failureRedirect: "/login",
+        failureRedirect: "/login",
+        failureFlash: "Please sign up first."
     }), function(req, res) {
+        req.flash("success", "Welcome to CoffeeShop " + req.user.username);
 		res.redirect("/");
 });
 
 //logout
 router.get("/logout", function(req, res){
     req.logout();
+    req.flash("success", "Logged out");
     res.redirect("/");
  });
 

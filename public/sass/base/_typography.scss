@@ -64,7 +64,7 @@ body {
 .heading-tertiary {
     color: $color-coffee-brown;
     text-align: center;
-
+    
     /* removes shadow */
     backface-visibility: hidden;
 
@@ -87,6 +87,7 @@ body {
         font-size: 1.5rem;
         font-weight: 400;
         letter-spacing: .3rem;   
+        animation: moveInRight 1s;
     }
 
 }
@@ -233,5 +234,8 @@ body {
 .heading-form {
     font-size: 3rem;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    text-align: center;
+
+    animation: moveInRight 1s;
 }

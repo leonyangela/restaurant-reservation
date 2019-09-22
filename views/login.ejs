@@ -1,13 +1,35 @@
 <% include partials/header %>
 
-    <form action="/login" method="post">
-        <label for="username" name="username">Username: </label>
-        <input type="text" name="username" id="" placeholder="Your Username" required>
+<div class="section-form">
+    <div class="row">     
+        <h1 class="heading-form">Login</h1>
 
-        <label for="password" name="password">Password:</label>
-        <input type="password" name="password" placeholder="Your Password" required>
+        <div class="form">
+            <div class="form__box">
+                <div class="form__box--left">
+                    <form action="/login" method="post">
+                        <div class="form__group">
+                            <label for="username" name="username" class="form__box__label">Username: </label>
+                            <input type="text" name="username" id="" placeholder="Your Username" class="form__box__input" required>
+                        </div>
 
-        <button>Submit</button>
-    </form>
+                        <div class="form__group">
+                            <label for="password" name="password" class="form__box__label">Password:</label>
+                            <input type="password" name="password" placeholder="Your Password" class="form__box__input" required>
+                        </div>
+
+                        <div class="form__group">
+                            <button class="button-primary btn--animated">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form__box--right">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <% include partials/footer %>

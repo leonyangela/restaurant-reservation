@@ -111,7 +111,8 @@ body {
     display: block;
     font-size: 1.5rem;
     font-weight: 400;
-    letter-spacing: .3rem; }
+    letter-spacing: .3rem;
+    animation: moveInRight 1s; }
 
 .heading-quaternary {
   color: #764134;
@@ -216,7 +217,9 @@ body {
 .heading-form {
   font-size: 3rem;
   font-weight: 600;
-  text-transform: capitalize; }
+  text-transform: uppercase;
+  text-align: center;
+  animation: moveInRight 1s; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -356,6 +359,7 @@ body {
   background-color: #fff;
   width: 25rem;
   height: 38rem;
+  animation: moveInLeft 1s;
   -webkit-box-shadow: 11px 16px 27px -6px rgba(0, 0, 0, 0.85);
   -moz-box-shadow: 11px 16px 27px -6px rgba(0, 0, 0, 0.85);
   box-shadow: 11px 16px 27px -6px rgba(0, 0, 0, 0.85); }
@@ -369,55 +373,65 @@ body {
     display: block;
     text-align: center; }
 
-.form__box {
-  padding: 2rem;
-  background-color: #fff; }
-
-.form__label {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-left: 2rem;
-  margin-top: .7rem;
-  transition: all .8s; }
-
-.form__group:not(:last-child) {
-  margin-bottom: 2rem; }
-
-.form__input {
-  font-size: 1.5rem;
-  font-family: inherit;
-  color: #3F1F00;
-  padding: 1.5rem 2rem;
-  border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  border-bottom: 3px solid transparent;
-  width: 30%;
-  transition: all .3s; }
-  .form__input:focus {
-    outline: none;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    border-bottom: 3px solid #3F1F00; }
-  .form__input:focus:invalid {
-    border-bottom: 3px solid #3F1F00; }
-  .form__input::-webkit-input-placeholder {
-    color: #3F1F00; }
-
-.form__input:placeholder-shown + .form__label {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4rem); }
+.form {
+  width: 100%;
+  background-color: rgba(201, 135, 101, 0.5); }
+  .form__box {
+    width: 100%;
+    overflow: auto;
+    display: block; }
+    .form__box--left {
+      float: left;
+      width: 50%;
+      height: 50rem;
+      padding-left: 2.5rem;
+      padding-top: 2.5rem; }
+    .form__box--right {
+      width: 50%;
+      float: right;
+      background-image: url("/images/form-add.jpg");
+      background-size: cover;
+      height: 50rem; }
+    .form__box__label {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-top: .7rem;
+      display: block;
+      transition: all .8s; }
+    .form__box__input {
+      font-size: 1.5rem;
+      font-family: inherit;
+      color: #3F1F00;
+      padding: .5rem 1rem;
+      margin-top: .5rem;
+      border-radius: 2px;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      border-bottom: 3px solid transparent;
+      width: 95%;
+      transition: all .3s; }
+      .form__box__input:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        border-bottom: 3px solid #C98765; }
+      .form__box__input:focus:invalid {
+        border-bottom: 3px solid #C98765; }
+      .form__box__input::-webkit-input-placeholder {
+        color: #3F1F00; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
 
 .beans-box {
   padding: 2rem;
   width: 24rem;
+  height: 45rem;
   background-color: #F5DEB3;
   border: 1px solid #3F1F00; }
   .beans-box__image--1 {
     border-radius: 20rem 20rem 20rem 20rem;
     -moz-border-radius: 20rem 20rem 20rem 20rem;
     -webkit-border-radius: 20rem 20rem 20rem 20rem;
-    background-image: url(/images/roasted-coffee-beans.jpg);
+    background-image: url(/images/double-coffee-bottle.jpg);
     width: 20rem;
     height: 20rem;
     background-size: cover;
@@ -426,7 +440,7 @@ body {
     border-radius: 20rem 20rem 20rem 20rem;
     -moz-border-radius: 20rem 20rem 20rem 20rem;
     -webkit-border-radius: 20rem 20rem 20rem 20rem;
-    background-image: url(/images/light-coffee-beans.jpg);
+    background-image: url(/images/disposable-coffee-cup.jpg);
     width: 20rem;
     height: 20rem;
     background-size: cover;
@@ -435,7 +449,7 @@ body {
     border-radius: 20rem 20rem 20rem 20rem;
     -moz-border-radius: 20rem 20rem 20rem 20rem;
     -webkit-border-radius: 20rem 20rem 20rem 20rem;
-    background-image: url(/images/espresso-coffee-beans.jpg);
+    background-image: url(/images/coffee-mug.jpg);
     width: 20rem;
     height: 20rem;
     background-size: cover;
@@ -444,7 +458,7 @@ body {
     border-radius: 20rem 20rem 20rem 20rem;
     -moz-border-radius: 20rem 20rem 20rem 20rem;
     -webkit-border-radius: 20rem 20rem 20rem 20rem;
-    background-image: url(/images/dark-coffee-beans.jpg);
+    background-image: url(/images/coffee-container.jpg);
     width: 20rem;
     height: 20rem;
     background-size: cover;
@@ -462,7 +476,8 @@ body {
     text-align: center;
     padding: 2rem;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 600;
+    animation: moveInBottom 1.5s; }
   .detail-product__image {
     height: 39rem; }
   .detail-product__desc {
@@ -472,7 +487,8 @@ body {
     background-color: white;
     position: absolute;
     left: 58rem;
-    top: 26rem; }
+    top: 26rem;
+    animation: moveInLeft .8s; }
   .detail-product__button-box {
     display: flex;
     justify-content: flex-start; }
@@ -631,4 +647,4 @@ body {
 
 .section-form {
   padding: 10rem;
-  background-color: burlywood; }
+  background-color: #E7DFC6; }
