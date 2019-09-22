@@ -95,4 +95,7 @@ router.delete("/product-details/:id", function(req, res) {
     });
 });
 
+
+
+
 module.exports = router;
