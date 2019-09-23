@@ -61,6 +61,7 @@ app.use(function(req, res, next) {
 app.use("/", indexRoutes);
 app.use("/shops", productRoutes);
 
-app.listen(3000, () => {
+
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server has started!");
 });
