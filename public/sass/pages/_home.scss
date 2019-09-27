@@ -1,12 +1,21 @@
 .section-beans {
     padding: 10rem;
     background-color: $color-coffee-medium;
+
+    @include respond(phone){
+        padding: 7rem;
+    }
 }
 
 .section-testimony {
     margin: 7rem;
     padding: 7rem;
     border: 1px solid $color-coffee-dark;
+
+    @include respond(phone){
+        padding: 3.5rem;
+        height: 63vh;
+    }
 }
 
 .section-products {

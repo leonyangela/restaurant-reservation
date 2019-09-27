@@ -5,13 +5,13 @@
     color: $color-coffee-dark;
 	position: relative;
 
-	// @include respond(tab-port){
-	// 	padding: 8rem 0;
-	// }
+	@include respond(tab-port){
+		// padding: 8rem 0;
+	}
 
-	// @include respond(phone){
-	
-	// }
+	@include respond(phone){
+		display: block;
+	}
 
 	&__logo-box {
 		top: 40%;
@@ -20,6 +20,10 @@
 		position: absolute;
 		width: 15rem;
 		background-size: cover;
+
+		@include respond(phone){
+			margin: -8rem 0;
+		}
 	}
 
 	&__navigation{
@@ -27,16 +31,18 @@
 		padding-top: 12rem;
 		border: 1px solid $color-white;
 
-		// @include respond(tab-port){
-		// 	width: 100%;
-		// 	float: none;
-		// }
+		@include respond(phone){
+			display: block;
+		}
 	}
 
 	&__list{
 		list-style: none;
 		padding-top: 4rem;
 		
+		@include respond(phone){
+			display: grid;
+		}
 		
 	} 
 

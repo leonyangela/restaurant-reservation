@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: row;
     
+    @include respond(phone) {
+        display: block;
+    }
+    
     &__left {
         width: 50%;
         background-color: $color-white;
@@ -13,19 +17,35 @@
         flex-direction: row;
         flex-wrap: wrap;
 
+        @include respond(phone) {
+            display: block;
+        }
+
         &__logo-box {
             padding: 0 4rem;
             position: absolute;
             background-size: cover;
+            
+            @include respond(phone) {
+                display: block;
+            }
         }
     
         &__logo {
             height: 5rem;
+
+            @include respond(phone) {
+                display: block;
+            }
         }
 
         &__menu {
             padding: .8rem 13rem;
             font-size: 1.7rem;
+
+            @include respond(phone) {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -51,6 +71,10 @@
     &__center {
         background-color: $color-white;
         width: 20%;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__right {
@@ -63,6 +87,10 @@
         padding-top: .8rem;
         padding-right: 1.5rem;
         font-size: 1.7rem;
+
+        @include respond(phone) {
+            display: block;
+        }
         
         ul {
             display: flex;
