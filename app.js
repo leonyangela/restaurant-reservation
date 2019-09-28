@@ -12,9 +12,6 @@ var express = require("express"),
     Product = require("./models/product"),
     User = require("./models/user");
 
-
-const PORT = 3000;
-
 //include routes
 var productRoutes = require("./routes/product"),
     indexRoutes = require("./routes/index");
