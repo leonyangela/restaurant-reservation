@@ -2,3 +2,18 @@
     background-color: $color-baby-blue;
     width: 100%;
 }
+
+.logo-box {
+    width: 50%;
+    height: auto;
+    border-right: 2px solid $color-coffee-light;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+
+    @include respond(phone){
+        display: block;
+        padding: 1rem;
+        border: 1px solid $color-coffee-light;
+        margin: 0 auto;
+    }
+}

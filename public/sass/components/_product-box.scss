@@ -8,6 +8,16 @@
     -moz-box-shadow: 11px 16px 27px -6px rgba(0,0,0,0.85);
     box-shadow: 11px 16px 27px -6px rgba(0,0,0,0.85);
 
+    @include respond(tab-port) {
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+
+    @include respond(phone) {
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+
     &__image-product {
         width: 25rem;
         height: 20rem;

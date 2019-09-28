@@ -247,12 +247,42 @@ body {
         font-size: 2rem;
         text-align: justify;
         font-weight: 400;
+
+        @include respond(tab-port) {
+            height: 15rem;
+            display: block;
+            margin: auto;
+            font-size: 1.4rem;
+        }
+
+        @include respond(phone) {
+            height: 15rem;
+            display: block;
+            margin: auto;
+            font-size: 1.4rem;
+        }
     }
 
     &__price {
         font-size: 2.5rem;
         font-weight: 600;
         padding-bottom: 1rem;
+
+        @include respond(tab-port) {
+            position: static;
+            display: block;
+            margin: auto;
+            font-size: 1.4rem;
+            padding: 8rem 0;
+        }
+
+        @include respond(phone) {
+            position: static;
+            display: block;
+            margin: auto;
+            font-size: 1.4rem;
+            padding: 8rem 0;
+        }
     }
 }
 

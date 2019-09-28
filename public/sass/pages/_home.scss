@@ -26,9 +26,23 @@
 .section-detail-product {
     padding: 10rem;
     background-color: beige;
+
+    @include respond(tab-port) {
+        padding: 1rem;
+    }
+
+    @include respond(phone) {
+        padding: 1rem;
+    }
 }
 
 .section-form {
     padding: 10rem;
     background-color: #E7DFC6;
+}
+
+.section-about-us {
+    padding: 5rem;
+    background-color: $color-white;
+    display: block;
 }

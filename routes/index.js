@@ -50,4 +50,14 @@ router.get("/logout", function(req, res){
     res.redirect("/");
  });
 
+ //about us
+router.get("/about-us", function(req, res){
+    res.render("about-us");
+ });
+
+ //location
+ router.get("/location", function(req, res){
+    res.render("location");
+ });
+
 module.exports = router;

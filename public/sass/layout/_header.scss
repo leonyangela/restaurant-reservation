@@ -8,12 +8,6 @@
     background-size: cover;
     background-position: top;
     position: relative;
-
-    // @include respond(phone){
-    //     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    //     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-
-    // }
     
     &__text-box {
         position: absolute;
@@ -21,5 +15,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+    }
+
+    &__about {
+        height: 90vh;
+        background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-baby-blue, 0.8), 
+        rgba($color-sand, 0.8)
+        ), url(../images/about-us.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
     }
 }
